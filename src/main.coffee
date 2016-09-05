@@ -1,4 +1,4 @@
-`global = global || window || this`
+`global= (typeof(global) != 'undefined' && global)  || (typeof(window) != 'undefined' && window) || this`
 $ = global.$ || global.jQuery || require('jquery')
 global.$ = $
 
